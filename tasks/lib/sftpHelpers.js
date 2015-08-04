@@ -12,8 +12,8 @@ exports.init = function (grunt) {
     var pathParts = path.split("/").filter(function (part) {
       return part !== "";
     });
-    var currentPath = "/";
-    var ptr = 0;
+    var currentPath = pathParts[0];
+    var ptr = 1;
 
     var mkdir = function (path, callback) {
       c.stat(currentPath, function (error, stat) {
